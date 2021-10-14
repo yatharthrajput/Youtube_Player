@@ -33,25 +33,7 @@ Since *flutter_inappwebview* relies on Flutter's mechanism for embedding Android
 * iOS: `--ios-language swift`, Xcode version `>= 11`
 
 
-#### For FullScreen Support
-If fullscreen support is required, wrap your player with `YoutubePlayerBuilder`
 
-```dart
-YoutubePlayerBuilder(
-    player: YoutubePlayer(
-        controller: _controller,
-    ),
-    builder: (context, player){
-        return Column(
-            children: [
-                // some widgets
-                player,
-                //some other widgets
-            ],
-        );
-    ),
-),
-```
 
          
 #### Playing live stream videos
