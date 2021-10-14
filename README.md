@@ -41,19 +41,6 @@ Set the isLive property to true in order to change the UI to match Live Video.
 
 ![Live UI Demo](live_ui.png) 
 
-```dart
-YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'iLnmTe5Q2Qw',
-    flags: YoutubePLayerFlags(
-      isLive: true,
-    ),
-);
-
-YoutubePlayer(
-    controller: _controller,
-    liveUIColor: Colors.amber,
-),
-```
 
 
 
