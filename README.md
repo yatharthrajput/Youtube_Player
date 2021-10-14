@@ -55,9 +55,7 @@ YoutubePlayer(
 ),
 ```
 
-## Example
 
-[Detailed Example](https://github.com/sarbagyastha/youtube_player_flutter/tree/master/example)
 
 ## Quick Links
 * [YoutubePlayer](https://pub.dev/documentation/youtube_player_flutter/latest/youtube_player_flutter/YoutubePlayer-class.html)
