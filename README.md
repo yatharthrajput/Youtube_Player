@@ -32,50 +32,6 @@ Since *flutter_inappwebview* relies on Flutter's mechanism for embedding Android
 * Android: `minSdkVersion 17` and add support for `androidx` (see [AndroidX Migration](https://flutter.dev/docs/development/androidx-migration))
 * iOS: `--ios-language swift`, Xcode version `>= 11`
 
-## Setup
-
-### iOS
-Add these lines to `Info.plist`
-
-```xml
-<key>io.flutter.embedded_views_preview</key>
-<true/>
-```
-
-For more info, [see here](https://pub.dev/packages/flutter_inappwebview#important-note-for-ios)
-
-### Android
-Set `minSdkVersion` of your `android/app/build.gradle` file to at least 17.
-
-For more info, [see here](https://pub.dev/packages/flutter_inappwebview#important-note-for-android)
-
-*Note:* Although the minimum to be set is 17, the player won't play on device with API < 20. 
-For API < 20 devices, you might want to forward the video to be played using YouTube app instead, using packages like `url_launcher` or `android_intent`.
-
-#### Using Youtube Player
-         
-```dart
-YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'iLnmTe5Q2Qw',
-    flags: YoutubePlayerFlags(
-        autoPlay: true,
-        mute: true,
-    ),
-);
-
-YoutubePlayer(
-    controller: _controller,
-    showVideoProgressIndicator: true,
-    videoProgressIndicatorColor: Colors.amber,
-    progressColors: ProgressColors(
-        playedColor: Colors.amber,
-        handleColor: Colors.amberAccent,
-    ),
-    onReady () {
-        _controller.addListener(listener);
-    },
-),
-```
 
 #### For FullScreen Support
 If fullscreen support is required, wrap your player with `YoutubePlayerBuilder`
@@ -115,36 +71,6 @@ YoutubePlayer(
     controller: _controller,
     liveUIColor: Colors.amber,
 ),
-```
-
-## Want to customize the player?
- With v5.x.x and up, use the `topActions` and `bottomActions` properties to customize the player.
-
- Some of the widgets bundled with the plugin are:
- * FullScreenButton
- * RemainingDuration
- * CurrentPosition
- * PlayPauseButton
- * PlaybackSpeedButton
- * ProgressBar
-
-```dart
-YoutubePlayer(
-    controller: _controller,
-    bottomActions: [
-      CurrentPosition(),
-      ProgressBar(isExpanded: true),
-      TotalDuration(),
-    ],
-),
-```
-
-## Want to play using Youtube URLs ? 
-The plugin also provides `convertUrlToId()` method that converts youtube links to its corresponding video ids.
-```dart
-String videoId;
-videoId = YoutubePlayer.convertUrlToId("https://www.youtube.com/watch?v=BBAyRBTfsOU");
-print(videoId); // BBAyRBTfsOU
 ```
 
 ## Example
