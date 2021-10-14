@@ -1,4 +1,4 @@
-![YOUTUBE PLAYER FLUTTER](misc/ypf_banner.png)
+![YOUTUBE PLAYER FLUTTER](ypf_banner.png)
 
 
 
@@ -9,7 +9,7 @@ Supported Platforms:
 * **Android** 
 * **iOS**
 
-![DEMO](misc/ypf_demo.gif)
+![DEMO](ypf_demo.gif)
 
 ## Salient Features
 * Inline Playback
